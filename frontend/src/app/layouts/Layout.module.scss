@@ -1,0 +1,19 @@
+@use '@/app/mixin';
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0 120px;
+    position: relative;
+
+    @include mixin.mobile {
+        margin: 0 25px;
+    }
+    @include mixin.tablet {
+        margin: 0 45px;
+    }
+    .fullBleed {
+        margin-inline: calc(-1 * var(--layout-pad));
+        width: calc(100% + 2 * var(--layout-pad));
+    }
+}

@@ -1,0 +1,14 @@
+@use '@/app/mixin';
+
+.step_work {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    .container {
+        width: 100%;
+        .group {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+}

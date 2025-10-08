@@ -1,0 +1,79 @@
+@use '@/app/mixin';
+
+.navbar_component {
+    z-index: 9999;
+    background-color: #0000;
+    transition: opacity 0.4s;
+    position: fixed;
+    inset: auto 0% 0%;
+    transition: all 0.4s ease-in-out;
+
+    &.hidden {
+        opacity: 0;
+        transform: translateY(100%);
+        filter: blur(30px);
+        pointer-events: none;
+    }
+}
+.navbar_background {
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    -webkit-backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.3rem);
+    background-color: #ffffff05;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 0;
+    inset: 0%;
+}
+
+.navbar_container {
+    z-index: 50;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding-bottom: 10px;
+
+    .navbar_body {
+        display: flex;
+        z-index: 1;
+        gap: 96px;
+        background-color: var(--black-grafit);
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        color: var(--alabaster-white);
+    }
+
+    .navbar_link_list {
+        display: flex;
+        gap: 20px;
+    }
+
+    .telegram {
+        margin-right: 32px;
+        svg {
+            path {
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    fill: var(--blue-primary);
+                }
+            }
+        }
+    }
+}
+
+@include mixin.mobile {
+    .navbar_container {
+        padding-left: 10px;
+        padding-right: 10px;
+        .navbar_body {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

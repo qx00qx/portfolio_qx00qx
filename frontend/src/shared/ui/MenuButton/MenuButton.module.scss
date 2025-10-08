@@ -1,0 +1,22 @@
+.menu_button {
+    border: 1px solid var(--dark-pink);
+    background-color: var(--alabaster-white);
+    box-shadow:
+        0 0.125rem 0.125rem -0.5px var(--pink),
+        0 0 0 0.25rem var(--pink);
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    img {
+        svg {
+            rect {
+                fill: var(--black-grafit);
+            }
+        }
+    }
+}

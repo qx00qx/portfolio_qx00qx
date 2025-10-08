@@ -1,0 +1,40 @@
+@use '@/app/mixin';
+
+.container {
+    padding: 10px 0px;
+
+    .textarea {
+        @include mixin.caption-xs;
+        &[aria-invalid='true'] {
+            color: var(--red-error);
+            &::placeholder {
+                color: var(--red-error);
+            }
+        }
+        transition: all 0.3s ease-in-out;
+        resize: none;
+        width: 100%;
+        opacity: 0.5;
+        height: 120px;
+        &:focus {
+            opacity: 1;
+        }
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--black-grafit);
+
+        &[aria-invalid='true'] {
+            color: var(--red-error);
+            &::placeholder {
+                color: var(--red-error);
+            }
+        }
+        &::placeholder {
+            @include mixin.caption-xxs;
+            color: var(--black-grafit);
+            opacity: 1;
+        }
+        &:not(:placeholder-shown) {
+            opacity: 1;
+        }
+    }
+}

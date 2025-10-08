@@ -1,0 +1,10 @@
+@use '@/app/mixin';
+
+.what_can_help {
+    margin-top: 50px;
+    padding-bottom: 150px;
+    // height: 100vh;
+    @include mixin.mobile {
+        height: 650px;
+    }
+}

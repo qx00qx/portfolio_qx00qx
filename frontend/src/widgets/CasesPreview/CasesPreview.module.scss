@@ -1,0 +1,14 @@
+@use '@/app/mixin';
+
+.cases {
+    padding-bottom: 50px;
+    &_group {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        &_mobile {
+            flex-direction: column;
+        }
+    }
+}

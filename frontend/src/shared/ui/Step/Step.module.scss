@@ -1,0 +1,48 @@
+@use '@/app/mixin';
+
+.step {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--black-grafit);
+    .top {
+        display: flex;
+        gap: 15px;
+        .number {
+            font-family: var(--minecraft-italic);
+            font-size: 36px;
+            font-style: italic;
+            letter-spacing: -0.9px;
+            line-height: 135%;
+        }
+        .text {
+            @include mixin.heading-m;
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+    .caption {
+        padding-top: 15px;
+        span {
+            @include mixin.caption-s;
+            opacity: 0.7;
+        }
+    }
+
+    @include mixin.mobile {
+        .top {
+            flex-direction: column;
+            gap: 5px;
+            .number {
+                font-size: 32px;
+            }
+            .text {
+                @include mixin.heading-s;
+            }
+        }
+        .caption {
+            padding-top: 25px;
+            span {
+                @include mixin.caption-xs;
+            }
+        }
+    }
+}

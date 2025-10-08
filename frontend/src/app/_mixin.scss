@@ -1,0 +1,66 @@
+/* Typography */
+
+@mixin caption-s {
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    line-height: 117%;
+    font-weight: 400;
+}
+
+@mixin caption-xs {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.32px;
+}
+@mixin caption-xxs {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 135%;
+    letter-spacing: -0.32px;
+}
+
+@mixin heading-s {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.9px;
+    line-height: 117%;
+}
+@mixin heading-m {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.9px;
+    line-height: 135%;
+}
+
+@mixin display-xl {
+    font-size: 150px;
+    line-height: 135%;
+    letter-spacing: -0.9px;
+    font-weight: 500;
+}
+
+@mixin display-m {
+    font-size: 70px;
+    letter-spacing: -1px;
+    line-height: 90%;
+    font-weight: 500;
+}
+
+@mixin mobile {
+    @media (max-width: 435px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

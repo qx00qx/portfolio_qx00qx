@@ -1,0 +1,52 @@
+@use '@/app/mixin';
+.feedback {
+    padding-top: 10px;
+    .link_back {
+        color: var(--black-grafit);
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .feedback_container {
+        margin-top: 12px;
+        display: flex;
+        gap: 20px;
+        h1 {
+            font-size: 62px;
+            letter-spacing: -0.9px;
+        }
+        .subheading {
+            font-size: 24px;
+            letter-spacing: -0.32px;
+            line-height: 135%;
+        }
+        .left_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .right_container {
+            max-width: 600px;
+            margin-bottom: 50px;
+            h2 {
+                margin-bottom: 48px;
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        .feedback_container {
+            flex-direction: column;
+            h1 {
+                font-size: 46px;
+                line-height: 110%;
+                margin-top: 20px;
+            }
+            .subheading {
+                font-size: 18px;
+            }
+        }
+    }
+}

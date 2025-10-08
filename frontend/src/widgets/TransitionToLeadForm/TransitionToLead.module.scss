@@ -1,0 +1,48 @@
+@use '@/app/mixin';
+
+.transition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 530px;
+        z-index: 2;
+        .kaomoji {
+            font-size: 70px;
+            line-height: 90%;
+            letter-spacing: -1px;
+        }
+        .text_and_btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            .text {
+                @include mixin.display-m;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mixin.mobile {
+        .block {
+            .kaomoji {
+                font-size: 50px;
+            }
+            .text_and_btn {
+                .text {
+                    @include mixin.heading-m;
+                }
+            }
+        }
+    }
+}

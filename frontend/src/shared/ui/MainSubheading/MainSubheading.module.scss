@@ -1,0 +1,12 @@
+@use '@/app/mixin';
+
+.subheading {
+    @include mixin.heading-m;
+    margin-bottom: 64px;
+    text-transform: uppercase;
+
+    @include mixin.mobile {
+        margin-bottom: 42px;
+        font-size: 34px;
+    }
+}

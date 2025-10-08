@@ -1,0 +1,66 @@
+@use '@/app/mixin';
+
+.conditions {
+    padding-top: 50px;
+    height: 100vh;
+    .container {
+        .subheading {
+            @include mixin.heading-m;
+            margin-bottom: 20px;
+        }
+        .text_block {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .h3 {
+                @include mixin.caption-s;
+            }
+            p {
+                @include mixin.caption-xs;
+            }
+        }
+        .payment_steps {
+            margin-top: 50px;
+            display: flex;
+            border-radius: 30px;
+            flex-direction: row;
+            gap: -10px;
+            background-color: var(--soft-grey);
+            .step {
+                border-radius: 30px;
+                padding: 20px;
+                display: flex;
+                background-color: #ffff;
+                width: 510px;
+                flex-direction: column;
+                gap: 40px;
+                &_grey {
+                    background-color: var(--soft-grey);
+                    border: none;
+                }
+                &_pink {
+                    background-color: #c9d2ea;
+                    border: none;
+                }
+                span {
+                    @include mixin.caption-xxs;
+                }
+                p {
+                    @include mixin.heading-s;
+                }
+            }
+        }
+    }
+    @include mixin.mobile {
+        height: inherit;
+        .container {
+            .payment_steps {
+                flex-direction: column;
+                .step {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

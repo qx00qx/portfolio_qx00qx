@@ -1,0 +1,30 @@
+@use '@/app/mixin';
+
+.container {
+    .input {
+        @include mixin.caption-xs;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        opacity: 0.5;
+        &:focus {
+            opacity: 1;
+        }
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--black-grafit);
+        &[aria-invalid='true'] {
+            color: var(--red-error);
+            opacity: 1;
+            &::placeholder {
+                color: var(--red-error);
+            }
+        }
+        &::placeholder {
+            @include mixin.caption-xxs;
+            color: var(--black-grafit);
+            opacity: 1;
+        }
+        &:not(:placeholder-shown) {
+            opacity: 1;
+        }
+    }
+}

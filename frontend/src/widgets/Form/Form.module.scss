@@ -1,0 +1,41 @@
+@use '@/app/mixin';
+
+.budget_checkboxes {
+    margin-bottom: 48px;
+    .tip {
+        font-size: 14px;
+        opacity: 0.5;
+    }
+    .checkbox_group {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem;
+    }
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_container {
+    padding: 10px 0px;
+    .error_text {
+        margin-top: 10px;
+        color: var(--red-error);
+        font-size: 14px;
+    }
+}
+
+@include mixin.mobile {
+    .budget_checkboxes {
+        .checkbox_group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}

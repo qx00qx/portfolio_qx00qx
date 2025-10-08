@@ -1,0 +1,17 @@
+@use '@/app/mixin';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 300px;
+    span {
+        @include mixin.display-xl;
+    }
+    p {
+        @include mixin.heading-s;
+    }
+}

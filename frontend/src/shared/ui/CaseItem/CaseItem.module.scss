@@ -1,0 +1,48 @@
+@use '@/app/mixin';
+
+.case_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    max-width: 488px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .mini_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+    }
+    .link {
+        color: var(--black-grafit);
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        gap: 5px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @include mixin.mobile {
+        .content {
+            .title {
+                font-size: 18px;
+            }
+        }
+    }
+}
