@@ -1,18 +1,10 @@
 import React from 'react'
 import styles from './Textarea.module.scss'
 
-interface TextareaProps
-    extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
-
-const Textarea: React.FC<TextareaProps> = ({ placeholder, id, ...rest }) => {
+const Textarea: React.FC<React.TextareaHTMLAttributes<HTMLTextAreaElement>> = ({ placeholder, id, ...rest }) => {
     return (
         <div className={styles.container}>
-            <textarea
-                className={styles.textarea}
-                id={id}
-                placeholder={placeholder}
-                {...rest}
-            />
+            <textarea className={styles.textarea} id={id} placeholder={placeholder} {...rest} />
         </div>
     )
 }

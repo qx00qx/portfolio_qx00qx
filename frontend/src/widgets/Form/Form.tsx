@@ -40,7 +40,7 @@ const FormLead: React.FC = () => {
             console.error(`Ошибка лида ${error}`)
         }
     }
-    const error: SubmitErrorHandler<FormLeadData> = (data) => {}
+    const error: SubmitErrorHandler<FormLeadData> = () => {}
 
     return (
         <form onSubmit={handleSubmit(submit, error)}>
@@ -70,41 +70,18 @@ const FormLead: React.FC = () => {
                     />
                 </div>
                 <div className={styles.input_container}>
-                    <Textarea
-                        id="message"
-                        placeholder="Кратко опишите вашу задачу"
-                        {...register('message')}
-                    />
+                    <Textarea id="message" placeholder="Кратко опишите вашу задачу" {...register('message')} />
                 </div>
             </div>
             <div className={styles.budget_checkboxes}>
-                <span className={styles.tip}>
-                    *выберите примерный бюджет проекта
-                </span>
+                <span className={styles.tip}>*выберите примерный бюджет проекта</span>
                 <div className={styles.checkbox_group}>
-                    <Checkbox
-                        text="до 50 тыс."
-                        value="до 50 тыс."
-                        {...register('budget')}
-                    />
-                    <Checkbox
-                        text="100 тыс."
-                        value="100 тыс."
-                        {...register('budget')}
-                    />
-                    <Checkbox
-                        text="> 200 тыс."
-                        value="> 200 тыс."
-                        {...register('budget')}
-                    />
+                    <Checkbox text="до 50 тыс." value="до 50 тыс." {...register('budget')} />
+                    <Checkbox text="100 тыс." value="100 тыс." {...register('budget')} />
+                    <Checkbox text="> 200 тыс." value="> 200 тыс." {...register('budget')} />
                 </div>
             </div>
-            <Button
-                className={styles.button_arrow}
-                type="submit"
-                text="Оставить заявку"
-                ArrowAction
-            />
+            <Button className={styles.button_arrow} type="submit" text="Оставить заявку" ArrowAction />
         </form>
     )
 }

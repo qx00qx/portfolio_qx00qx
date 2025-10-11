@@ -8,11 +8,8 @@ interface SquareImageProp {
 
 const SquareImage: React.FC<SquareImageProp> = ({ url, size = 63 }) => {
     return (
-        <div
-            className={styles.square_image}
-            style={{ height: size, width: size }}
-        >
-            <img src={url} />
+        <div className={styles.square_image} style={{ height: size, width: size }}>
+            <img src={url} alt={url} />
         </div>
     )
 }

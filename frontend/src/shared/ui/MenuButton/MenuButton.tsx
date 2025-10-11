@@ -8,7 +8,7 @@ interface MenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 }
 
 const MenuButton: React.FC<MenuButtonProps> = ({ children, close = false, ...props }) => {
-    const [isClose, setIsClose] = useState<boolean>(close)
+    const [isClose] = useState<boolean>(close)
     return (
         <button className={cn(styles.menu_button, isClose && styles.close_button)} {...props}>
             {children}

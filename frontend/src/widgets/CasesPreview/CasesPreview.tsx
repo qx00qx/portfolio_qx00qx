@@ -7,9 +7,7 @@ import { CASES } from '@/shared/data/case'
 import { useBreakpoint } from '@/shared/lib/useBreakpoints'
 import { cn } from '@/shared/lib/classname'
 
-type PreviewCasesProps = {}
-
-const PreviewCases: React.FC<PreviewCasesProps> = (props) => {
+const PreviewCases: React.FC = () => {
     const breakpoint = useBreakpoint()
     return (
         <section className={styles.cases}>

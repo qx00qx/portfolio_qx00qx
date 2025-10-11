@@ -2,11 +2,9 @@
 import React from 'react'
 import styles from './StepWorks.module.scss'
 import MainSubheading from '@/shared/ui/MainSubheading/MainSubheading'
-import { useBreakpoint } from '@/shared/lib/useBreakpoints'
 import Step from '@/shared/ui/Step/Step'
 
 const StepWorks: React.FC = () => {
-    const breakpoint = useBreakpoint()
     return (
         <section className={styles.step_work}>
             <div className={styles.container}>

@@ -2,8 +2,6 @@
 
 import React, { ReactNode } from 'react'
 import styles from './Layout.module.scss'
-import Footer from '@/widgets/Footer'
-import { ReactLenis } from 'lenis/react'
 import NavigationBar from '@/widgets/NavigationBar/NavigationBar'
 import { usePathMatch } from '@/shared/lib/hooks/usePathMatch'
 

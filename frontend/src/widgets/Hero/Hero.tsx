@@ -26,10 +26,10 @@ const Hero: React.FC = () => {
 
     return (
         <div className={styles.hero}>
-            <img className={styles.cross} src={'/refs/cros.svg'} />
-            <img className={styles.cross_right} src={'/refs/cros.svg'} />
+            <img className={styles.cross} src={'/refs/cros.svg'} alt="крест" />
+            <img className={styles.cross_right} src={'/refs/cros.svg'} alt="крест" />
             <div ref={ref} className={styles.qxqx_portfolio}>
-                <img className={styles.qxqx} src={'/refs/text.svg'} />
+                <img className={styles.qxqx} src={'/refs/text.svg'} alt="qx00qx portfolio" />
             </div>
             <div
                 style={
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
                 }
                 className={styles.kitty}
             >
-                <img src={'/refs/kitty.svg'} />
+                <img src={'/refs/kitty.svg'} alt="kitty" />
             </div>
         </div>
     )

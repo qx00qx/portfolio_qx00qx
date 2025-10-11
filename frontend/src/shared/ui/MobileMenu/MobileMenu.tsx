@@ -6,9 +6,7 @@ import CustomLink from '../Link/CustomLink'
 import gsap from 'gsap'
 import ShinyText from '../ShinyText/ShinyText'
 
-type MobileMenuProps = {}
-
-const MobileMenu: React.FC<MobileMenuProps> = (props) => {
+const MobileMenu: React.FC = () => {
     const [open, setOpen] = useState(false)
     const lenis = useLenis()
     const linksRef = useRef<HTMLDivElement[]>([])
@@ -80,11 +78,11 @@ const MobileMenu: React.FC<MobileMenuProps> = (props) => {
                     </div>
                 </div>
                 <MenuButton close onClick={() => setOpen(false)}>
-                    <img src={'/close.svg'} />
+                    <img src={'/close.svg'} alt="закрыть" />
                 </MenuButton>
             </div>
             <MenuButton onClick={() => setOpen(true)}>
-                <img src={'/Menu_Button.svg'} />
+                <img src={'/Menu_Button.svg'} alt="открыть меню" />
             </MenuButton>
         </>
     )

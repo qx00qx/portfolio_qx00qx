@@ -1,8 +1,7 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import SplitText from '@/shared/ui/SplitText/SplitText'
 import styles from './MainSubheading.module.scss'
-import gsap from 'gsap'
 
 interface MainSubheadingProps {
     text: string

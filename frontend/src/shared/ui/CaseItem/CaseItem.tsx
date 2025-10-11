@@ -22,7 +22,7 @@ const CaseItem: React.FC<CaseItemProps> = ({ title, miniIcon, image, link, descr
             </div>
             <Link href={link} className={styles.link}>
                 <p>смотреть</p>
-                <img src={'/refs/mini_arrow.svg'} />
+                <img src={'/refs/mini_arrow.svg'} alt='смотреть' />
             </Link>
         </div>
     )
