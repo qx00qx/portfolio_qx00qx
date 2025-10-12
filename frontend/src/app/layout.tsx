@@ -5,7 +5,6 @@ import localFont from 'next/font/local'
 import './globals.scss'
 import Footer from '@/widgets/Footer'
 import ReactLenis from 'lenis/react'
-import Preloader from '@/widgets/Preloader/Preloader'
 
 const inter = Inter({
     variable: '--font-intel',
@@ -42,7 +41,6 @@ export default function RootLayout({
             </Head>
             <body className={`${inter.className} ${minecraft.variable}`}>
                 <ReactLenis root>
-                    <Preloader />
                     {children}
                     <Footer />
                 </ReactLenis>

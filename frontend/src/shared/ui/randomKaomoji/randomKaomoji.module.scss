@@ -1,0 +1,5 @@
+@use '@/app/mixin';
+
+.kaomoji {
+    @include mixin.display-xl;
+}

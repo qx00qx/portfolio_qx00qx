@@ -5,6 +5,7 @@ import WhatCanIHelpYou from '@/widgets/WhatCanIHelpYou/WhatCanIHelpYou'
 import WorkingConditions from '@/widgets/WorkingConditions/WorkingConditions'
 import Layout from './layouts/Layout'
 import PreviewCases from '@/widgets/CasesPreview/CasesPreview'
+import Footer from '@/widgets/Footer'
 
 export default function Home() {
     return (
