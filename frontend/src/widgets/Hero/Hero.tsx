@@ -4,6 +4,7 @@ import React from 'react'
 import styles from './Hero.module.scss'
 import { usePosition } from '@/shared/lib/hooks/usePosition'
 import { useBreakpoint } from '@/shared/lib/useBreakpoints'
+import Image from 'next/image'
 
 const Hero: React.FC = () => {
     const { position, ref } = usePosition()
@@ -29,7 +30,7 @@ const Hero: React.FC = () => {
             <img className={styles.cross} src={'/refs/cros.svg'} alt="крест" />
             <img className={styles.cross_right} src={'/refs/cros.svg'} alt="крест" />
             <div ref={ref} className={styles.qxqx_portfolio}>
-                <img className={styles.qxqx} src={'/refs/text.svg'} alt="qx00qx portfolio" />
+                <Image width={320} height={315} className={styles.qxqx} src={'/refs/text.svg'} alt="qx00qx portfolio" />
             </div>
             <div
                 style={
@@ -40,7 +41,7 @@ const Hero: React.FC = () => {
                 }
                 className={styles.kitty}
             >
-                <img src={'/refs/kitty.svg'} alt="kitty" />
+                <Image width={147} height={147} src={'/refs/kitty.svg'} alt="kitty" />
             </div>
         </div>
     )
