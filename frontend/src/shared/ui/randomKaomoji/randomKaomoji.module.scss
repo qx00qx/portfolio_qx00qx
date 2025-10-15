@@ -2,4 +2,7 @@
 
 .kaomoji {
     @include mixin.display-xl;
+    @include mixin.mobile {
+        font-size: 50px;
+    }
 }

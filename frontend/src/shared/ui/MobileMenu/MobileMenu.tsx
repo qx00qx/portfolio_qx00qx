@@ -25,8 +25,8 @@ const MobileMenu: React.FC = () => {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.5,
-                    stagger: 0.25,
+                    duration: 0.3,
+                    stagger: 0.2,
                     ease: 'power2.out',
                 }
             )
@@ -51,38 +51,24 @@ const MobileMenu: React.FC = () => {
                             if (el) linksRef.current[0] = el
                         }}
                     >
-                        <CustomLink text="Обо мне" href="/" />
+                        <CustomLink text="Кейсы" href={'/cases'} />
                     </div>
                     <div
                         ref={(el) => {
                             if (el) linksRef.current[1] = el
                         }}
                     >
-                        <CustomLink text="Условия" href={'/'} />
-                    </div>
-                    <div
-                        ref={(el) => {
-                            if (el) linksRef.current[2] = el
-                        }}
-                    >
-                        <CustomLink text="Этапы работы" href={'/'} />
-                    </div>
-                    <div
-                        ref={(el) => {
-                            if (el) linksRef.current[3] = el
-                        }}
-                    >
-                        <CustomLink className={styles.action_link} href={'/'}>
+                        <CustomLink className={styles.action_link} href={'/feedback'}>
                             <ShinyText disabled={false} speed={3} text="Заполнить форму" />
                         </CustomLink>
                     </div>
                 </div>
                 <MenuButton close onClick={() => setOpen(false)}>
-                    <img src={'/close.svg'} alt="закрыть" />
+                    <img src={'/close_blue.svg'} alt="закрыть" />
                 </MenuButton>
             </div>
             <MenuButton onClick={() => setOpen(true)}>
-                <img src={'/Menu_Button.svg'} alt="открыть меню" />
+                <img src={'/Menu_Button_Blue.svg'} alt="открыть меню" />
             </MenuButton>
         </>
     )

@@ -24,9 +24,9 @@
         &:hover {
             box-shadow:
                 inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
-                inset 0px -4px 0px 0px #c4000033,
+                inset 0px -4px 0px 0px #0048c433,
                 0px 0px 0px 4px rgba(255, 255, 255, 0.2),
-                0px 0px 180px 0px var(--pink);
+                0px 0px 180px 0px var(--accent);
         }
     }
 
@@ -42,7 +42,7 @@
         transition: all 0.3s ease-in-out;
     }
     &:hover {
-        background: var(--pink);
+        background: var(--accent);
         opacity: 0.9;
         .arrow {
             margin-left: 24px;

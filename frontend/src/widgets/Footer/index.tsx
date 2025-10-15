@@ -7,7 +7,9 @@ import { usePathMatch } from '@/shared/lib/hooks/usePathMatch'
 import { usePathname } from 'next/navigation'
 
 const Footer = () => {
-    const shoulShowButton = usePathMatch('/feedback')
+    const feedbackPatch = usePathMatch('/feedback')
+    const casesPatch = usePathMatch('/cases')
+    const shoulShowButton = feedbackPatch && casesPatch
 
     const pathname = usePathname()
     const is404Page = pathname === '/404'

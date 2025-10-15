@@ -1,14 +1,6 @@
 @use '@/app/mixin';
 .feedback {
     padding-top: 10px;
-    .link_back {
-        color: var(--black-grafit);
-        opacity: 0.5;
-        transition: all 0.4s ease-in-out;
-        &:hover {
-            opacity: 1;
-        }
-    }
 
     .feedback_container {
         margin-top: 12px;

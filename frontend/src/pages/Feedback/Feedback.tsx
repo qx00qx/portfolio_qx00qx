@@ -3,18 +3,16 @@
 import FormLead from '@/widgets/Form/Form'
 import React from 'react'
 import styles from './Feedback.module.scss'
-import Link from 'next/link'
-import Layout from '@/app/layouts/Layout'
+import Layout from '@/app/(site)/layouts/Layout'
 import { useBreakpoint } from '@/shared/lib/useBreakpoints'
+import LinkBack from '@/shared/ui/LinkBack/LinkBack'
 
 const FeedbackPage: React.FC = () => {
     const breakpoint = useBreakpoint()
     return (
         <Layout>
             <div className={styles.feedback}>
-                <Link className={styles.link_back} href="/">
-                    назад
-                </Link>
+                <LinkBack />
                 <div className={styles.feedback_container}>
                     <div className={styles.left_container}>
                         <h1>Давайте знакомиться</h1>

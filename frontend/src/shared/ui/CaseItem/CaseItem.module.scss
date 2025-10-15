@@ -7,24 +7,43 @@
     align-items: flex-end;
     max-width: 488px;
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        .title {
-            font-size: 20px;
-            font-weight: 500;
-        }
-        .mini_icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        }
-        .image {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            &:hover {
+                cursor: pointer;
+                // .title {
+                //     color: rgb(18, 0, 137);
+                //     color: var(--soft-grey);
+                // }
+                .image {
+                    scale: 1.05;
+                }
+            }
+            .title {
+                font-size: 20px;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+            }
+            .mini_icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            }
+            .img_container {
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                -webkit-backface-visibility: hidden;
+            }
+            .image {
+                width: 100%;
+                border-radius: 20px;
+                transition: all 0.3s ease-in-out;
+            }
         }
     }
     .link {
@@ -37,11 +56,21 @@
             opacity: 1;
         }
     }
-
     @include mixin.mobile {
         .content {
-            .title {
-                font-size: 18px;
+            a {
+                .title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @include mixin.tablet {
+        .content {
+            a {
+                .title {
+                    font-size: 18px;
+                }
             }
         }
     }

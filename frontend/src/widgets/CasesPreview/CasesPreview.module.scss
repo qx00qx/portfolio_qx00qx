@@ -7,8 +7,17 @@
         flex-direction: row;
         gap: 20px;
         justify-content: space-between;
+        margin-bottom: 30px;
         &_mobile {
             flex-direction: column;
         }
     }
+}
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+.button_more {
+    max-width: fit-content;
+    font-size: 18px;
 }

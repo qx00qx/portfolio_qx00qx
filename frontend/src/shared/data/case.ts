@@ -5,6 +5,7 @@ export interface Case {
     miniIcon: string
     url: string
     image: string
+    descriptionText?: string
 }
 
 export const CASES: Case[] = [
@@ -15,6 +16,7 @@ export const CASES: Case[] = [
         miniIcon: '/cases/delta/mini_icon.png',
         image: '/cases/delta/case_bw.png',
         url: 'https://dprofile.ru/case/150882/delta-website-redesign',
+        descriptionText: 'редизайн сайта компании DELTA - федерального провайдера услуг безопасности',
     },
     {
         id: '2',
@@ -23,5 +25,6 @@ export const CASES: Case[] = [
         miniIcon: '/cases/delta/mini_icon.png',
         image: '/cases/delta/cover_logo.png',
         url: 'https://dprofile.ru/case/149732/delta-logotype-redesign',
+        descriptionText: 'редизайн логотипа для компании DELTA',
     },
 ]

@@ -8,6 +8,7 @@ import { SubmitErrorHandler, SubmitHandler, useForm } from 'react-hook-form'
 import Textarea from '@/shared/ui/Areatext/Textarea'
 import styles from './Form.module.scss'
 import Checkbox from '@/shared/ui/Checkbox/Checkbox'
+import Link from 'next/link'
 
 export interface FormLeadData {
     name: string
@@ -74,7 +75,7 @@ const FormLead: React.FC = () => {
                 </div>
             </div>
             <div className={styles.budget_checkboxes}>
-                <span className={styles.tip}>*выберите примерный бюджет проекта</span>
+                <span className={styles.tip}>* выберите примерный бюджет проекта</span>
                 <div className={styles.checkbox_group}>
                     <Checkbox text="до 50 тыс." value="до 50 тыс." {...register('budget')} />
                     <Checkbox text="100 тыс." value="100 тыс." {...register('budget')} />
@@ -82,6 +83,12 @@ const FormLead: React.FC = () => {
                 </div>
             </div>
             <Button className={styles.button_arrow} type="submit" text="Оставить заявку" ArrowAction />
+            <p className={styles.tip}>
+                * Нажимая на кнопку, вы соглашаетесь с{' '}
+                <Link className={styles.privacy} href={'/privacy'}>
+                    политикой конфиденциальности
+                </Link>
+            </p>
         </form>
     )
 }

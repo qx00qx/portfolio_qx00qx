@@ -1,5 +1,5 @@
 .shiny-text {
-    background: linear-gradient(120deg, var(--black-grafit) 40%, var(--pink) 50%, var(--black-grafit) 60%);
+    background: linear-gradient(120deg, var(--black-grafit) 40%, #8f8f9f 50%, var(--black-grafit) 60%);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;

@@ -23,13 +23,12 @@ const NavigationBar = () => {
                     {breakpoint === 'mobile' && <MobileMenu />}
                     {(breakpoint === 'desktop' || breakpoint === 'tablet') && (
                         <div className={styles.navbar_link_list}>
-                            <CustomLink text="Обо мне" href={'/'} />
-                            <CustomLink text="Условия" href={'/'} />
-                            <CustomLink text="Этапы работы" href={'/'} />
+                            <CustomLink text="Кейсы" href={'/cases'} />
+                            <CustomLink text="Заполнить форму" href={'/feedback'} />
                         </div>
                     )}
                     {(breakpoint === 'desktop' || breakpoint === 'tablet') && (
-                        <Link className={styles.telegram} href={'/'}>
+                        <Link className={styles.telegram} href={'https://t.me/qx00qxw'}>
                             <svg
                                 width="26"
                                 height="21"

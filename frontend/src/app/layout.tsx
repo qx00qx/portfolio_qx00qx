@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.scss'
-import Footer from '@/widgets/Footer'
 import ReactLenis from 'lenis/react'
 
 const inter = Inter({
@@ -40,10 +39,7 @@ export default function RootLayout({
                 <meta name="apple-mobile-web-app-title" content="MyWebSite" />
             </Head>
             <body className={`${inter.className} ${minecraft.variable}`}>
-                <ReactLenis root>
-                    {children}
-                    <Footer />
-                </ReactLenis>
+                <ReactLenis root>{children}</ReactLenis>
             </body>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </html>

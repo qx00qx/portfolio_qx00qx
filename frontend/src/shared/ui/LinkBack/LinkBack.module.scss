@@ -1,0 +1,9 @@
+.link_back {
+    width: fit-content;
+    color: var(--black-grafit);
+    opacity: 0.5;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+}

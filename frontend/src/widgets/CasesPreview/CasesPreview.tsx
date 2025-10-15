@@ -6,6 +6,8 @@ import CaseItem from '../../shared/ui/CaseItem/CaseItem'
 import { CASES } from '@/shared/data/case'
 import { useBreakpoint } from '@/shared/lib/useBreakpoints'
 import { cn } from '@/shared/lib/classname'
+import Button from '@/shared/ui/Button/Button'
+import Link from 'next/link'
 
 const PreviewCases: React.FC = () => {
     const breakpoint = useBreakpoint()
@@ -14,7 +16,7 @@ const PreviewCases: React.FC = () => {
             <div className={styles.container}>
                 <MainSubheading text="Кейсы" />
                 <div className={cn(styles.cases_group, breakpoint === 'mobile' && styles.cases_group_mobile)}>
-                    {CASES.map((item) => (
+                    {CASES.slice(0, 2).map((item) => (
                         <CaseItem
                             key={item.id}
                             description={item.description}
@@ -25,6 +27,9 @@ const PreviewCases: React.FC = () => {
                         />
                     ))}
                 </div>
+                <Link className={styles.link} href={'/cases'}>
+                    <Button className={styles.button_more} text={'Смотреть больше'} />
+                </Link>
             </div>
         </section>
     )

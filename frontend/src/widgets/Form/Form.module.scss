@@ -2,16 +2,19 @@
 
 .budget_checkboxes {
     margin-bottom: 48px;
-    .tip {
-        font-size: 14px;
-        opacity: 0.5;
-    }
     .checkbox_group {
         margin-top: 16px;
         display: flex;
         flex-wrap: wrap;
         grid-column-gap: 0.5rem;
         grid-row-gap: 0.5rem;
+    }
+}
+.tip {
+    font-size: 14px;
+    opacity: 0.5;
+    .privacy {
+        border-bottom: 1px solid;
     }
 }
 
@@ -28,6 +31,10 @@
         color: var(--red-error);
         font-size: 14px;
     }
+}
+
+.button_arrow {
+    margin-bottom: 20px;
 }
 
 @include mixin.mobile {

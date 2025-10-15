@@ -10,8 +10,8 @@ interface RandomKaomojiProps {
 }
 
 const kaomojisByType: Record<EmojiTypes, string[]> = {
-    forError404: ['o(>< )o', '☆ｏ(＞＜；)○', '┐(シ)┌', '𐔌՞. .՞𐦯', '|･ω･)'],
-    forHomePage: ['☆ﾐ(o*･ω･)ﾉ', 'o(>ω<)o', '(･ω<)☆', '___〆(・∀・)'],
+    forError404: ['o(>< )o', '┐(シ)┌', '𐔌՞. .՞𐦯', '|･ω･)'],
+    forHomePage: ['o(>ω<)o', '(･ω<)☆', '☆(>ᴗ•)'],
 }
 
 export const RandomKaomoji = ({ type }: RandomKaomojiProps) => {

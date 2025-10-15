@@ -13,6 +13,7 @@
         border-bottom: 1px solid var(--black-grafit);
         &[aria-invalid='true'] {
             color: var(--red-error);
+            border-color: var(--red-error);
             opacity: 1;
             &::placeholder {
                 color: var(--red-error);

@@ -59,3 +59,9 @@
 .checkbox_input:disabled {
     background: gray;
 }
+
+@include mixin.mobile {
+    .checkbox_input {
+        width: 160px;
+    }
+}
