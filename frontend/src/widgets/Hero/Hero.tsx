@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
     const getKittyOffset = () => {
         switch (breakpoint) {
             case 'mobile':
-                return { top: 350, left: 40 }
+                return { top: 290, left: 10 }
             case 'tablet':
                 return { top: 390, left: 50 }
             case 'desktop':
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <img className={styles.cross} src={'/refs/cros.svg'} alt="крест" />
             <img className={styles.cross_right} src={'/refs/cros.svg'} alt="крест" />
             <div ref={ref} className={styles.qxqx_portfolio}>
-                <Image width={320} height={315} className={styles.qxqx} src={'/refs/text.svg'} alt="qx00qx portfolio" />
+                <Image width={320} height={315} className={styles.qxqx} src={'/refs/text.png'} alt="qx00qx portfolio" />
             </div>
             <div
                 style={
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
                 }
                 className={styles.kitty}
             >
-                <Image width={147} height={147} src={'/refs/kitty.svg'} alt="kitty" />
+                <Image width={147} height={147} src={'/refs/kitty.png'} alt="kitty" />
             </div>
         </div>
     )
